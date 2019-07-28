@@ -3,7 +3,7 @@ import React from 'react';
 class Editor extends React.Component {
 	render() {
 		return (
-			<div>editor</div>
+			<div className="Editor">editor</div>
 		);
 	}
 }

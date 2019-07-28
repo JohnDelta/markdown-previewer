@@ -1,7 +1,8 @@
 * {
 	margin : 0px;
 	padding : 0px;
-	font-family : arial, helvetica;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .App {
@@ -10,10 +11,18 @@
 	justify-content : center;
 }
 
+header {
+	background-color : red;
+	min-height : 7.5vh;
+	width : 100vw;
+	display : flex;
+	flex-direction : row;
+}
+
 main {
 	background-color : gray;
 	width : 100vw;
-	min-height  : 90vh;
+	min-height  : 85vh;
 	display : flex;
 	flex-direction : row;
 }
@@ -22,13 +31,50 @@ footer {
 	background-color : #000000;
 	color : #FFFFFF;
 	width : 100vw;
-	min-height : 10vh;
+	min-height : 7.5vh;
 }
 
 .Editor {
+	width : 100%;
+	height : 85vh;
 	color : white;
+	display : block;
+	background-color : green;
 }
 
 .Previewer {
+	width : 100%;
+	height : 85vh;
+	display : none;
 	color : white;
+	background-color : purple;
 }
+
+.editor-option-tab {
+	order : 1;
+}
+
+.editor-option-tab {
+	order : 2;
+}
+
+.option-tab {
+	background-color : blue;
+	color : #FFFFFF;
+	height : 7.5vh;
+	min-width : 100px;
+	text-decoration : none;
+	border : none;
+	padding : 0px 5px;
+	font-size : 20px;
+	transition-duration : 0.4s;
+	cursor : pointer;
+}
+
+.option-tab:hover {
+	transition-duration : 0.4s;
+	opacity : 0.5;
+}
+
+
+
