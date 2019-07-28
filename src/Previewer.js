@@ -3,7 +3,7 @@ import React from 'react';
 class Previewer extends React.Component {
 	render() {
 		return (
-			<div className="Previewer">Previewer</div>
+			<div className="Previewer" id="Previewer">Previewer</div>
 		);
 	}
 }
