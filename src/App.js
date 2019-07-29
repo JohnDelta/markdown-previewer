@@ -8,18 +8,15 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			markedText : ""
+			editorText : ""
 		};
 		this.handleChange = this.handleChange.bind(this);
 	}
 	
-	/*
-		Used by children 'Editor' to send the result here, so it can be
-		send back to previewer panel
-	*/
+	/*Used by the children 'Editor' to update the editor text*/
 	handleChange = (e) => {
 		this.setState({
-			markedText : e
+			editorText : e
 		});
 	};
 	
@@ -30,8 +27,11 @@ class App extends React.Component {
 					<TabLinks />
 				</header>
 				<main>
-					<Editor handleChange={this.handleChange}/>
-					<Previewer markedText={this.state.markedText}/>
+					<Editor 
+						handleChange={this.handleChange}
+						editorText={this.state.editorText}
+					/>
+					<Previewer editorText={this.state.editorText}/>
 				</main>
 				<footer>
 					<a 

@@ -71,6 +71,8 @@ footer a {
 }
 
 .previewer-textarea {
+	color : #000000;
+	background-color : #FFFFFF;
 	width : 95%;
 	height : 95%;
 }

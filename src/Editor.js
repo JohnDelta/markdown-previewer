@@ -1,27 +1,34 @@
 import React from 'react';
-import marked from 'marked';
 
 class Editor extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			editorText : "default value"
+			editorText : ""
 		};
-		
 		this.handleChange = this.handleChange.bind(this);
 	}
 	
+	/*Initialize editor-previewer value*/
 	componentWillMount() {
-		this.props.handleChange(marked(this.state.editorText));
+		this.setState({
+			editorText : "default value"
+		});
+		this.props.handleChange(this.state.editorText);
+	}
+	
+	/*If the state change, inform the parent*/
+	componentDidUpdate() {
+		if(this.props.editorText !== this.state.editorText) {
+			this.props.handleChange(this.state.editorText);
+		}
 	}
 	
 	handleChange = (e) => {
 		this.setState({
 			editorText : e.target.value
 		});
-		
-		// transfer the result to parent
-		this.props.handleChange(marked(this.state.editorText));
+		this.props.handleChange(this.state.editorText);
 	};
 	
 	render() {
