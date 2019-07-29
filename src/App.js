@@ -15,7 +15,7 @@ function App() {
 				<Previewer />
 			</main>
 			<footer>
-				<a href="" target="_blank" title="visit my site!">By John Delta</a>
+				<a href="https://github.com/JohnDelta" target="_blank" title="visit my site!">By John Delta</a>
 			</footer>
 		</div>
 	);

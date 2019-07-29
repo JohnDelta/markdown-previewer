@@ -17,12 +17,11 @@ class TabLinks extends React.Component {
 
 	openTab = (e) => {
 		if(this.state.openedTab !== e.target.name) {
-			document.getElementById(e.target.name).style.display = "block";
+			document.getElementById(e.target.name).style.display = "flex";
 			document.getElementById(e.target.name+"Btn").style.opacity = "1";
 			document.getElementById(this.state.openedTab).style.display = "none";
 			document.getElementById(this.state.openedTab+"Btn").style.opacity = "0.5";
 		}
-		console.log("data : "+e.target.tab);
 		this.setState({
 			openedTab : e.target.name
 		});
