@@ -14,7 +14,7 @@ class App extends React.Component {
 	}
 	
 	/*
-		Used by the children 'Editor' to send the result here, so it can be
+		Used by children 'Editor' to send the result here, so it can be
 		send back to previewer panel
 	*/
 	handleChange = (e) => {
@@ -31,7 +31,7 @@ class App extends React.Component {
 				</header>
 				<main>
 					<Editor handleChange={this.handleChange}/>
-					<Previewer markedText={this.markedText}/>
+					<Previewer markedText={this.state.markedText}/>
 				</main>
 				<footer>
 					<a 

@@ -11,6 +11,10 @@ class Editor extends React.Component {
 		this.handleChange = this.handleChange.bind(this);
 	}
 	
+	componentWillMount() {
+		this.props.handleChange(marked(this.state.editorText));
+	}
+	
 	handleChange = (e) => {
 		this.setState({
 			editorText : e.target.value
