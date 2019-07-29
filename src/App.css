@@ -1,3 +1,10 @@
+/*
+	basic : #005377
+	dark : #052F5F
+	light : #49BFA0
+	constrast : F1A208
+*/
+
 * {
 	margin : 0px;
 	padding : 0px;
@@ -6,17 +13,16 @@
 }
 
 .App {
+	background-color : #052F5F;
 	display : flex;
 	flex-direction : column;
 	justify-content : center;
 }
 
 header {
-	background-color : red;
+	background-color : none;
 	min-height : 7.5vh;
 	width : 100vw;
-	display : flex;
-	flex-direction : row;
 }
 
 main {
@@ -28,10 +34,17 @@ main {
 }
 
 footer {
-	background-color : #000000;
-	color : #FFFFFF;
+	display : flex;
+	justify-content : center;
+	align-items : center;
+	background-color : none;
 	width : 100vw;
 	min-height : 7.5vh;
+}
+
+footer a {
+	color : #FFFFFF;
+	text-decoration : none;
 }
 
 .Editor {
@@ -50,8 +63,15 @@ footer {
 	background-color : purple;
 }
 
+.TabLinks {
+	display : flex;
+	flex-direction : row;
+	justify-content : flex-start;
+	width : 100vw;
+}
+
 .option-tab {
-	background-color : blue;
+	background-color : #005377;
 	color : #FFFFFF;
 	height : 7.5vh;
 	min-width : 100px;
@@ -61,12 +81,26 @@ footer {
 	font-size : 20px;
 	transition-duration : 0.4s;
 	cursor : pointer;
+	opacity : 0.5;
+	border-top-right-radius : 10px;
+	outline : none;
+}
+
+.option-tab-previewer {
+	border-top-left-radius : 10px;
+}
+
+.option-tab-editor {
+	opacity : 1;
 }
 
 .option-tab:hover {
 	transition-duration : 0.4s;
-	opacity : 0.5;
 }
 
+.info-option {
+	justify-self:end;
+	opacity : 1;
+}
 
 
