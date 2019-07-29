@@ -16,15 +16,23 @@ class TabLinks extends React.Component {
 	}
 
 	openTab = (e) => {
-		if(this.state.openedTab !== e.target.name) {
-			document.getElementById(e.target.name).style.display = "flex";
-			document.getElementById(e.target.name+"Btn").style.opacity = "1";
-			document.getElementById(this.state.openedTab).style.display = "none";
-			document.getElementById(this.state.openedTab+"Btn").style.opacity = "0.5";
+		if(e.target.id === "EditorBtn" && this.state.openedTab !== "Editor") {
+			document.getElementById("Editor").style.display = "flex";
+			document.getElementById("EditorBtn").style.opacity = "1";
+			document.getElementById("Previewer").style.display = "none";
+			document.getElementById("PreviewerBtn").style.opacity = "0.5";
+			this.setState({
+				openedTab : "Editor"
+			});
+		} else if (e.target.id === "PreviewerBtn" && this.state.openedTab !== "Previewer") {
+			document.getElementById("Previewer").style.display = "flex";
+			document.getElementById("PreviewerBtn").style.opacity = "1";
+			document.getElementById("Editor").style.display = "none";
+			document.getElementById("EditorBtn").style.opacity = "0.5";
+			this.setState({
+				openedTab : "Previewer"
+			});
 		}
-		this.setState({
-			openedTab : e.target.name
-		});
 	}
 	
 	render() {
@@ -34,22 +42,20 @@ class TabLinks extends React.Component {
 					className="option-tab option-tab-editor" 
 					title="Open editor"
 					onClick={this.openTab}
-					name="Editor"
 					id="EditorBtn">
-					<i class="fa fa-edit"></i> Editor
+					<i className="fa fa-edit"></i> Editor
 				</button>
 				<button 
 					className="option-tab option-tab-previewer" 
 					title="Open previewer"
 					onClick={this.openTab}
-					name="Previewer"
 					id="PreviewerBtn">
-					<i class="fa fa-eye"></i> Previewer
+					<i className="fa fa-eye"></i> Previewer
 				</button>
 				<button
 					className="info-option option-tab"
 					title="How to write">
-					<i class="fa fa-info-circle"></i>
+					<i className="fa fa-info-circle"></i>
 				</button>
 			</div>
 		);
