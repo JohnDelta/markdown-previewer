@@ -1,10 +1,11 @@
 import React from 'react';
+import marked from 'marked';
 
 class Editor extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			editorText : "this is the text"
+			editorText : "default value"
 		};
 		
 		this.handleChange = this.handleChange.bind(this);
@@ -12,14 +13,16 @@ class Editor extends React.Component {
 	
 	handleChange = (e) => {
 		this.setState({
-			editorText : this.state.editorText + e.target.value
+			editorText : e.target.value
 		});
-		console.log(this.state.editorText);
+		
+		// transfer the result to parent
+		this.props.handleChange(marked(this.state.editorText));
 	};
 	
 	render() {
 		return (
-			<div className="Editor" id="Editor">
+			<div className="Panel Editor" id="Editor">
 				<textarea
 					id="EditorTextArea"
 					onChange={this.handleChange}

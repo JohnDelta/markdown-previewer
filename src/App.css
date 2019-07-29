@@ -49,26 +49,25 @@ footer a {
 	text-decoration : none;
 }
 
-.Editor {
+.Panel {
 	width : 100%;
 	height : 85vh;
 	color : white;
-	display : flex;
 	justify-content : center;
 	align-items : center;
 }
 
-.Editor textarea {
+.Panel textarea {
 	width : 95%;
 	height : 95%;
 }
 
+.Editor {
+	display : flex;
+}
+
 .Previewer {
-	width : 100%;
-	height : 85vh;
 	display : none;
-	color : white;
-	background-color : purple;
 }
 
 .TabLinks {
