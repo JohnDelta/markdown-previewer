@@ -10,7 +10,7 @@
 	--- font families ---
 	'Montserrat' : previewer text
 	'Blinker' : buttons, titles, links...
-	'Share Tech Mono' : display code
+	'Share Tech Mono' : display code, editor text
 */
 
 * {
@@ -24,20 +24,19 @@
 	background-color : #052F5F;
 	display : flex;
 	flex-direction : column;
-	justify-content : center;
 }
 
 header {
 	align-self:center;
 	background-color : none;
-	min-height : 7.5vh;
+	height : 7.5vh;
 	width : 100vw;
 }
 
 main {
 	background-color : #005377;
 	width : 100vw;
-	min-height  : 85vh;
+	height  : 85vh;
 	display : flex;
 	flex-direction : row;
 }
@@ -49,7 +48,7 @@ footer {
 	align-items : center;
 	background-color : none;
 	width : 100vw;
-	min-height : 7.5vh;
+	height : 7.5vh;
 }
 
 footer a {
@@ -58,20 +57,20 @@ footer a {
 }
 
 .Panel {
-	width : 100%;
-	height : 85vh;
+	width : 100vw;
+	height : 100%;
 	color : white;
 	justify-content : center;
 	align-items : center;
 }
 
 .Panel textarea {
-	width : 88%;
-	height : 88%;
+	width : 95%;
+	height : 95%;
 	resize : none;
-	padding : 25px;
 	font-family : 'Share Tech Mono', monospace;
 	font-size : 14px;
+	padding : 4px;
 }
 
 .Editor {
@@ -82,21 +81,13 @@ footer a {
 	display : none;
 }
 
-.previewer-textarea {
-	color : #000000;
-	background-color : #FFFFFF;
-	width : 88%;
-	height : 88%;
-	padding : 25px;
-	overflow : scroll;
-	font-family : 'Montserrat', sans-serif;
-}
-
 .TabLinks {
 	display : flex;
 	flex-direction : row;
 	justify-content : flex-start;
+	align-items : flex-end;
 	width : 100vw;
+	height : 100%;
 }
 
 .option-tab {
@@ -146,6 +137,16 @@ footer a {
 	align-items : center;
 }
 
+.previewer-textarea {
+	color : #000000;
+	background-color : #FFFFFF;
+	width : 95%;
+	height : 95%;
+	padding : 4px;
+	overflow-y : scroll;
+	font-family : 'Montserrat', sans-serif;
+}
+
 /*Markedown Style*/
 .previewer-textarea code {
 	background-color : #005377;
@@ -180,26 +181,46 @@ footer a {
 }
 
 .previewer-textarea blockquote {
-	
+	display : inline-block;
+	background-color : #DFEEF5;
+	border-left : 1px solid #000000;
+	margin : 0px 10px;
 }
 
 .previewer-textarea table {
-	margin : 0px 10px;
+	margin : 5px 10px;
 	background-color : #DFEEF5;
 	padding : 4px;
 	border-radius : 4px;
 }
 
-.previewer-textarea tbody {
-	background-color : gray;
+.previewer-textarea tbody,thead tr {
+	font-size : 15px;
+	text-align : center;
+}
+
+.previewer-textarea thead tr {
+	color : #052F5F;
+}
+
+.previewer-textarea tbody tr:nth-child(odd) {
+	background-color : #FFFFFF;
+}
+
+.previewer-textarea tbody tr:nth-child(even) {
+	background-color : #F4F4F4;
 }
 
 .previewer-textarea td {
-	
-	padding : 2px;
+	padding : 2px 4px;
 	border-radius : 2px;
 }
 
+.previewer-textarea ul,ol {
+	margin : 0px 20px;
+}
 
-
-
+.previewer-textarea img {
+	max-height : 90%;
+	max-width : 90%;
+}
