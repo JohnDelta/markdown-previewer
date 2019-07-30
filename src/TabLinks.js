@@ -52,11 +52,14 @@ class TabLinks extends React.Component {
 					id="PreviewerBtn">
 					<i className="fa fa-eye"></i> Previewer
 				</button>
-				<button
+				<a
 					className="info-option option-tab"
-					title="How to write">
+					title="See the Github Flavored Markdown Documentation"
+					rel="noopener noreferrer"
+					target="_blank" 
+					href="https://github.github.com/gfm/">
 					<i className="fa fa-info-circle"></i>
-				</button>
+				</a>
 			</div>
 		);
 	}

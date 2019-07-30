@@ -1,4 +1,7 @@
 import React from 'react';
+import getDefaultTextValue from './getDefaultTextValue';
+
+const defaultTextValue = getDefaultTextValue();
 
 class Editor extends React.Component {
 	constructor(props) {
@@ -12,7 +15,7 @@ class Editor extends React.Component {
 	/*Initialize editor-previewer value*/
 	componentWillMount() {
 		this.setState({
-			editorText : "default value"
+			editorText : defaultTextValue
 		});
 		this.props.handleChange(this.state.editorText);
 	}
