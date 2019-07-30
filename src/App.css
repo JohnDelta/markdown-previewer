@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Blinker|Montserrat|Share+Tech+Mono&display=swap');
+
 /*
-	colour palette
+	--- colour palette ---
 	basic : #005377
 	dark : #052F5F
 	light : #49BFA0
 	constrast : F1A208
+	
+	--- font families ---
+	'Montserrat' : previewer text
+	'Blinker' : buttons, titles, links...
+	'Share Tech Mono' : display code
 */
 
 * {
@@ -36,6 +43,7 @@ main {
 }
 
 footer {
+	font-family : 'Blinker', sans-serif;
 	display : flex;
 	justify-content : center;
 	align-items : center;
@@ -62,6 +70,8 @@ footer a {
 	height : 88%;
 	resize : none;
 	padding : 25px;
+	font-family : 'Share Tech Mono', monospace;
+	font-size : 14px;
 }
 
 .Editor {
@@ -79,6 +89,7 @@ footer a {
 	height : 88%;
 	padding : 25px;
 	overflow : scroll;
+	font-family : 'Montserrat', sans-serif;
 }
 
 .TabLinks {
@@ -103,6 +114,7 @@ footer a {
 	opacity : 0.5;
 	border-top-right-radius : 10px;
 	outline : none;
+	font-family : 'Blinker', sans-serif;
 }
 
 .option-tab-previewer {
@@ -133,5 +145,61 @@ footer a {
 	justify-content : center;
 	align-items : center;
 }
+
+/*Markedown Style*/
+.previewer-textarea code {
+	background-color : #005377;
+	color : #FFFFFF;
+	display : inline-block;
+	margin : 2px;
+	padding : 2px;
+	opacity : .8;
+}
+
+.previewer-textarea h1 {
+	color : #052F5F;
+	margin-bottom : 8px;
+}
+
+.previewer-textarea h2 {
+	color : #005377;
+	margin-bottom : 2px;
+	margin : 0px 4px;
+}
+
+.previewer-textarea h3,h4,h5,h6 {
+	margin : 0px 8px;
+}
+
+.previewer-textarea p {
+	margin : 8px;
+}
+
+.previewer-textarea pre {
+	margin : 0px 8px;
+}
+
+.previewer-textarea blockquote {
+	
+}
+
+.previewer-textarea table {
+	margin : 0px 10px;
+	background-color : #DFEEF5;
+	padding : 4px;
+	border-radius : 4px;
+}
+
+.previewer-textarea tbody {
+	background-color : gray;
+}
+
+.previewer-textarea td {
+	
+	padding : 2px;
+	border-radius : 2px;
+}
+
+
 
 
