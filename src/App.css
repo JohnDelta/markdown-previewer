@@ -36,7 +36,7 @@ header {
 main {
 	background-color : #005377;
 	width : 100vw;
-	height  : 85vh;
+	height  : 86.5vh;
 	display : flex;
 	flex-direction : row;
 }
@@ -48,13 +48,32 @@ footer {
 	align-items : center;
 	background-color : none;
 	width : 100vw;
-	height : 7.5vh;
+	height : 6vh;
 }
 
 footer a {
+	font-size : 14px;
 	color : #FFFFFF;
 	text-decoration : none;
+	transition-duration : 0.4s;
+	-webkit-transition-duration : 0.4s;
+	-moz-transition-duration : 0.4s;
+	-o-transition-duration : 0.4s;
 }
+
+@media only screen and (min-width : 768px) {
+	footer a {
+		font-size : 16px;
+	}
+}
+
+footer a:hover {
+	color : #F1A208;
+	transition-duration : 0.4s;
+	-webkit-transition-duration : 0.4s;
+	-moz-transition-duration : 0.4s;
+	-o-transition-duration : 0.4s;
+}	
 
 .Panel {
 	width : 100vw;
@@ -68,9 +87,20 @@ footer a {
 	width : 95%;
 	height : 95%;
 	resize : none;
+	-moz-resize : none;
 	font-family : 'Share Tech Mono', monospace;
 	font-size : 14px;
 	padding : 4px;
+}
+
+.previewer-textarea {
+	color : #000000;
+	background-color : #FFFFFF;
+	width : 95%;
+	height : 95%;
+	padding : 4px;
+	overflow-y : scroll;
+	font-family : 'Montserrat', sans-serif;
 }
 
 .Editor {
@@ -81,6 +111,28 @@ footer a {
 	display : none;
 }
 
+@media only screen and (min-width : 768px) {
+	.Previewer {
+		display : flex !important;
+	}
+	
+	.Editor {
+		display : flex !important;
+	}
+	
+	.Panel textarea {
+		width : 48.5vw;
+		overflow : scroll;
+		font-size : 15px;
+	}
+	
+	.previewer-textarea {
+		overflow : scroll;
+		width : 48.5vw;
+	}
+	
+}
+
 .TabLinks {
 	display : flex;
 	flex-direction : row;
@@ -88,6 +140,12 @@ footer a {
 	align-items : flex-end;
 	width : 100vw;
 	height : 100%;
+}
+
+@media only screen and (min-width : 768px) {
+	.TabLinks {
+		justify-content : space-between;
+	}
 }
 
 .option-tab {
@@ -100,12 +158,20 @@ footer a {
 	border : none;
 	padding : 0px 5px;
 	font-size : 16px;
-	transition-duration : 0.4s;
 	cursor : pointer;
 	opacity : 0.5;
 	border-top-right-radius : 10px;
 	outline : none;
 	font-family : 'Blinker', sans-serif;
+	
+	transition-duration : 0.4s;
+	-webkit-transition-duration : 0.4s;
+	-moz-transition-duration : 0.4s;
+	-o-transition-duration : 0.4s;
+}
+
+.option-tab:hover {
+	color : #F1A208;
 }
 
 .option-tab-previewer {
@@ -118,6 +184,9 @@ footer a {
 
 .option-tab:hover {
 	transition-duration : 0.4s;
+	-webkit-transition-duration : 0.4s;
+	-moz-transition-duration : 0.4s;
+	-o-transition-duration : 0.4s;
 }
 
 .info-option {
@@ -137,14 +206,26 @@ footer a {
 	align-items : center;
 }
 
-.previewer-textarea {
-	color : #000000;
-	background-color : #FFFFFF;
-	width : 95%;
-	height : 95%;
-	padding : 4px;
-	overflow-y : scroll;
-	font-family : 'Montserrat', sans-serif;
+@media only screen and (min-width : 768px) {
+	.option-tab {
+		font-size : 19px;
+	}
+	
+	.option-tab-previewer {
+		opacity : 1 !important;
+		pointer-events : none;
+		margin-left : 30px;
+	}
+	
+	.option-tab-editor {
+		opacity : 1 !important;
+		pointer-events : none;
+		word-break : none;
+	}
+	
+	.info-option {
+		margin-left : 0px;
+	}
 }
 
 /*Markedown Style*/
@@ -155,6 +236,8 @@ footer a {
 	margin : 2px;
 	padding : 2px;
 	opacity : .8;
+	font-family : 'Share Tech Mono', monospace;
+	font-size : 15px;
 }
 
 .previewer-textarea h1 {
